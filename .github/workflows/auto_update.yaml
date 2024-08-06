@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v3
       - name: Commit changes
         run: |
-          ./main
+          go run main.go
