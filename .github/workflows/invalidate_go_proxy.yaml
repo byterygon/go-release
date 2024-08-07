@@ -1,0 +1,13 @@
+name: Invalidate go proxy
+on: 
+    push:
+        tags:
+            - v*
+        paths:
+            - ".github/workflows/invalidate_go_proxy.yaml"
+jobs:
+    invalidate-cache:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get tags
+              run:  bash invalidate_go_proxy.sh
